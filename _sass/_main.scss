@@ -1,0 +1,205 @@
+html, body {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  font-size: 10px;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after { box-sizing: inherit }
+
+body {
+  position: relative;
+  font-family: 'Lato', sans-serif;
+  background: color(gray, base);
+  color: color(text,base);
+  webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+  // fixing some crazy mobile browser shiz
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 0;
+}
+
+#primary-header {
+  position: relative;
+  padding-top: 25%;
+  overflow: hidden;
+  
+  @include media(small) {
+    min-height: 200px;
+    height: 4vh;
+    overflow: hidden
+  }
+}
+
+.main-content {
+  position: relative;
+  flex: 1;
+  z-index: 1;
+}
+
+//$navWidth: (200px + 6vw);
+$Padding: 5%;
+main {
+  position: relative;
+  background: linear-gradient(to right,
+      #deecf0,white 15%,white 85%, #deecf0);
+  border-top: 3px solid color(primary,base);
+  border-bottom: 3px solid color(primary,base);
+  box-shadow: 0 0 50px #000;
+  min-height: 100%;
+
+  padding: 5%;
+
+  overflow: hidden;
+  z-index: -1;
+  transition: transform .5s;
+}
+
+.nav-container {
+  /* position: relative;
+  float: left;
+  min-height: 100%;
+  width: calc(150px + 10%);
+  float: left;
+  padding: 5% 3.5rem 0 3.5rem; */
+}
+
+.nav-trigger {
+  position: fixed;
+  z-index: 100;
+  $spcr: calc(1rem + 1.2vw);
+  top: $spcr;
+  right: $spcr;
+  height: 44px;
+  width: 44px;
+  overflow: hidden;
+  color: transparent;
+  white-space: nowrap;
+  text-indent: 100%;
+  
+  @media only screen and (min-width: 1200px) {
+    left: $spcr;
+    right: initial;
+  }
+}
+
+.nav-trigger span,
+.nav-trigger span::before,
+.nav-trigger span::after {
+  position: absolute;
+  height: 4px;
+  width: 36px;
+  border-radius: 2px;
+  background: color(primary,base);
+}
+
+.nav-trigger span {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: background .3s;
+}
+
+.nav-trigger span::before,
+.nav-trigger span::after {
+  content: '';
+  top: 0;
+  left: 0;
+  transition: background .3s, transform .3s;
+}
+
+.nav-trigger span::before {
+  transform: translateY(-12px);
+}
+
+.nav-trigger span::after {
+  transform: translateY(12px);
+}
+
+.nav-trigger:hover span,
+.nav-trigger:hover span::before,
+.nav-trigger:hover span::after {
+  background: white;
+}
+
+.nav-open {
+  main {
+    transform: scale(.9);
+  }
+
+  .nav-trigger span {
+    background: transparent;
+  }
+  .nav-trigger span::before,
+  .nav-trigger span::after {
+    background: color(gray,light);
+  }
+  .nav-trigger span::before {
+    transform: rotate(-45deg);
+  }
+  .nav-trigger span::after {
+    transform: rotate(45deg);
+  }
+  .overlay {
+    opacity: .6;
+    visibility: visible;
+  }
+
+  .nav-container {
+    transform: translateX(0);
+  }
+
+  .nav a {
+    animation: slide-in .4s .2s backwards;
+  }
+
+  @for $i from 1 to 11 {
+    .nav li:nth-child(#{$i}) a { animation-delay: $i * 0.1s; }
+  }
+}
+
+.overlay {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: color(gray, base);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s, visibility .5s;
+}
+
+.nav-container {
+  position: fixed;
+  z-index: 13;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: calc(250px + 5vw);
+  max-width: 450px;
+  // spcr plus height of trigger (44px)
+  padding: calc(1rem * 2 + 1.2vw * 2 + 44px) 2% 2% 2%;
+  $colorDark: #212b2e;
+  $colorBgGradient: saturate(lighten($colorDark,75%),20%);
+  background: linear-gradient(to left, white 60%, $colorBgGradient);
+  overflow: auto;
+  transform: translateZ(0);
+  transform: translateX(-100%);
+  transition: transform .5s cubic-bezier(.07,.23,.34,1);
+  
+  @media only screen and (max-width: 1200px) {
+    background: linear-gradient(to right, white 60%, $colorBgGradient);
+    left: initial;
+    right: 0;
+    padding: calc(1.5rem + 1.2vw) 3.5em 2em 3.5em;
+    transform: translateX(100%);
+  }
+}

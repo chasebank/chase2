@@ -1,0 +1,75 @@
+canvas {
+  position:absolute;
+  top:0;
+  left:0;
+  width: 100%;
+}
+
+.chase-logo-svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-80%);
+  display: block;
+  width: 30%;
+  min-width: 200px;
+  max-width: 250px;
+  margin: 1rem auto 0 auto;
+  //z-index: 100;
+}
+
+//.chase-logo-svg {fill:fade(#adf1ff,35%);
+.chase-logo-c-top { fill: url(#gradient-left-right) }
+.chase-logo-c-tophl { fill: url(#gradient-right-left) }
+.chase-logo-c-mid { fill: url(#gradient-top-bottom) }
+.chase-logo-c-bottomhl { fill: url(#gradient-top-bottomhl) }
+.chase-logo-c-bottom { fill: url(#gradient-left-right) }
+.chase-logo-letter { fill: url(#gradient-bottom-top) }
+
+.mountains {
+  position: absolute;
+  bottom: 0;
+  width: 200vw;
+  overflow: hidden;
+}
+
+.mountains > span {
+  float: left;
+  padding-top: 100%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+
+  &:not(:first-of-type) {
+    margin-left: -1px;
+  }
+}
+
+#mountains-background {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/106403/mountains-background.gif);
+  width: 85vw;
+  animation: rolling-mountains 320s linear infinite;
+
+  @include media(small) { width: 66vw }
+}
+
+#mountains-midground {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/106403/mountains-midground.gif);
+  width: 65vw;
+  animation: rolling-mountains 100s linear infinite;
+
+  @include media(small) { width: 80vw }
+}
+
+#mountains-foreground {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/106403/mountains-foreground.gif);
+  width: 50vw;
+  animation: rolling-mountains 40s linear infinite;
+
+  @include media(small) { width: 100vw }
+}
+
+@keyframes rolling-mountains {
+  0% { transform: translate3d(0,0,0) }
+  100% { transform: translate3d(-100%,0,0) }
+}
