@@ -11,17 +11,17 @@
   
   h3 {
     text-transform: uppercase;
+    margin: 0;
   }
   
   > li {
-    margin-bottom: 3em;
+    margin-bottom: 2rem;
         
     ul {
       margin: 0;
-      font-size: $fontSizeBase;
       font-weight: bold;
       
-      li { margin-top: .75em }
+      li { margin-top: .25em }
     }
   }
 }
@@ -40,9 +40,7 @@
 .nav a {
   display: block;
   padding: .4em 0;
-  font-size: 40px;
   font-weight: bold;
-  font-family: serif;
   text-decoration: none;
   color: #1F2B3D;
   transform: translateZ(0);
@@ -81,21 +79,23 @@
   }
 }
 
+.social-media-wrap {
+  text-align: center;
+}
+
 ul.social-media {
   position: relative;
-  font-family: 'Lato', sans-serif;
   display: inline-block;
   zoom: 1;
   list-style: none;
   text-align: left;
   padding: .1em .5rem 0 0;
-  margin: 0;
+  margin: 0 auto;
   color: #a8f8ff;
-  font-size: 1.4rem;
   
   li {
     position: relative;
-    padding-left: 3rem;
+    padding-left: 2.5em;
     
     + li { margin-top: 1em }
     
@@ -111,33 +111,33 @@ ul.social-media {
       left: 0;
       top: 50%;
       transform: translate3d(0,-49%,0);
-      height: 2.5rem;
-      width: 2.5rem;
+      height: 1.8em;
+      width: 1.8em;
       border-radius: 50%;
       text-align: center;
-      line-height: 2.5rem;
-      font-size: 1.25rem;
+      line-height: 1.8em;
+      font-size: 1em;
       font-family: 'FontAwesome';
     }
     &.email a {
-      @include socialIcon($title: 'email',$icon: '\f1d8',$bgColor: color(primary,base),$textColor: white);
-      &:before { padding-right: .2em }
+      @include socialIcon($title: email,$icon: '\f1d8',$bgColor: color(primary,base),$textColor: white);
+      &:before { padding-right: .1em }
     }
     &.codepen a {
-      @include socialIcon($title: 'codepen',$icon: '\f1cb',$bgColor: #000,$textColor: white);
-      &:before { padding-right: .1em }
+      @include socialIcon($title: codepen,$icon: '\f1cb',$bgColor: #000,$textColor: white);
+      //&:before { padding-right: .1em }
     }
     &.twitter a {
       @include socialIcon($title: twitter,$icon: '\f099',$bgColor: #2caae1,$textColor: white)
     }
     &.linkedin a {
-      @include socialIcon($title: 'linkedin',$icon: '\f0e1',$bgColor: #1b86bd,$textColor: white)
+      @include socialIcon($title: linkedin,$icon: '\f0e1',$bgColor: #1b86bd,$textColor: white)
     }
     &.github a {
-      @include socialIcon($title: 'github',$icon: '\f113',$bgColor: #76c85a,$textColor: white)
+      @include socialIcon($title: github,$icon: '\f113',$bgColor: #76c85a,$textColor: white)
     }
     &.behance a {
-      @include socialIcon($title: 'behance',$icon: '\f1b4',$bgColor: #237ffc,$textColor: white)
+      @include socialIcon($title: behance,$icon: '\f1b4',$bgColor: #237ffc,$textColor: white)
     }
   }
 }

@@ -28,8 +28,9 @@
 @import "pagination";
 @import "message";*/
 
-@import "variables";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css");
+@import "bitsnpieces";
+@import "typography";
 @import "main";
 @import "header";
 @import "nav";
-@import "typography";
