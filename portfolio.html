@@ -1,0 +1,19 @@
+---
+layout: default
+title: Portfolio
+---
+
+<ul id="portfolio" class="portfolio-thumbs">
+    {% for project in site.portfolio %}
+    <li>
+        <a href="{{ site.baseurl }}{{ project.url }}">
+        <img src="{{ site.baseurl }}{{ project.url }}project-thumb.jpg" alt="{{ project.title }} Thumbnail" />
+        <div>
+            <h2>{{ project.title }}</h2>
+            <p>{{ project.service }}</p>
+            <i class="fa fa-picture-o"></i>
+        </div>
+        </a>
+    </li>
+    {% endfor %}
+</ul>

@@ -33,3 +33,12 @@ gems:
 
 exclude:
     - node_modules
+
+collections:
+  notes:
+    output: true
+    permalink: /:collection/:path/
+    post_dirs: false
+  portfolio: 
+    output: true
+    permalink: /portfolio/:path/
