@@ -1,0 +1,73 @@
+@mixin style($pagebg,$content-bg,$content-bggradient,$text,$accent,$black: black,$white: white) {
+	background: $pagebg;
+	color: $text;
+	.overlay { background: $black }
+	
+	main {
+		background: linear-gradient(to right, $content-bggradient, $content-bg 15%, $content-bg 85%, $content-bggradient);
+		border: none;
+	}
+	
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 { color: $accent }
+	
+	.nav-trigger span, .nav-trigger span::before, .nav-trigger span::after {
+    background: $accent;
+	}
+	
+	section {
+		color: $text
+	}
+	
+	.nav a {
+		color: $text;
+		
+		&.active { color: $accent }
+	}
+	
+	ul.social-media a {
+		color: $text
+	}
+	
+	.nav-container {
+    background: linear-gradient(to left, $content-bg 60%, $content-bggradient);
+		
+		@media only screen and (max-width: 1200px){
+			background: linear-gradient(to right, $content-bg 60%, $content-bggradient);
+		}
+	}
+	
+	.chase-logo-svg {
+		width: 4em;
+		min-width: 150px;
+		top: 10%;
+		transform: translateX(-50%)
+	}
+	
+	header {
+		canvas,
+		.mountains {
+			display: none;
+			width: 0px;
+			height: 0px;
+		}
+	}
+}
+
+.feastbeast {
+	@include style(red,green,blue,yellow,purple)
+}
+
+.aau {
+	@include style(
+		$pagebg: #0b152e,
+		$content-bg: #0b152e,
+		$content-bggradient: #0b152e,
+		$text: #dffbff,
+		$accent: #00e9ff
+	)
+}
