@@ -1,0 +1,176 @@
+article.quote {
+	position: relative;
+	padding: 3.5rem 1.5rem;
+	display: table;
+	width: 100%;
+	max-width: 700px;
+	min-height: 175px;
+	text-shadow: none;
+	border-radius: 1.5rem 1.5rem 1rem 1.5rem;
+	figure {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 35%;
+		margin: 0;
+		border-radius: 1.5rem 0 0 1.5rem;
+		background-position: center center;
+		background-size: cover;
+		image-rendering: pixelated;
+		.author-fade {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.quote-content {
+		display: table-cell;
+		height: 100%;
+		vertical-align: middle;
+	}
+	a {
+		color: currentColor;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+    
+	.quote-author a {
+		display: inline-block;
+	}
+	.quote-content.no-author-image {
+		width: 100%!important;
+        
+		p {
+			margin-top: -1.5rem;
+			margin-left: 0;
+		}
+        
+		.video-embed-wrap {
+			position: relative;
+			padding-top: 66.6667%;
+			width: 100%;
+			//overflow: hidden;
+
+			> * {
+				position: absolute!important;
+				top: 0;
+				left: 0;
+				width: 100%!important;
+				min-width: auto!important;
+				height: 100%!important;
+				margin: 0!important;
+			}
+		}
+	}
+	p {
+		position: relative;
+		text-align: center;
+		color: currentColor;
+		margin-top: 0;
+		margin-left: 30%;
+		line-height: 1;
+		//z-index: 10;
+		&:not(.quote-author) {
+			font-family: 'Amatic SC', 'Exo 2', sans-serif;
+			font-size: 2rem;
+		}
+		&.quote-author {
+			margin-top: 1rem;
+			font-size: 1rem;
+			font-weight: light;
+			margin-left: 30%;
+			text-transform: uppercase;
+			.author-title {
+				display: block;
+				margin-top: .2rem;
+				font-size: .8em;
+				text-transform: none;
+				font-weight: 300;
+				opacity: .7;
+				transform: translateX(.4rem);
+			 }
+		}
+	}
+	.quote-tail {
+		position: absolute;
+		height: 2.5rem;
+		right: 0;
+		bottom: -1.1rem;
+		z-index: -1;
+	}
+}
+
+
+// Stagger quotes at 100% on quotes page
+.quotes-page article.quote {
+	@media screen and (min-width: 1049px) {
+		&:nth-child(odd) {
+			left: auto!important;
+			right: 0px!important;
+		}
+	}
+}
+
+
+#twitter-widget-0 {
+	min-width: 100%!important;
+}
+
+.tweet-this {
+	display: block;
+	position: absolute;
+	right: .5rem;
+	bottom: .5rem;
+	margin: 0;
+	$tweetThisSize: 1.6rem;
+	width: $tweetThisSize;
+	height: $tweetThisSize;
+	opacity: .5;
+	transition: opacity .3s ease-in-out;
+
+	svg {
+        fill: currentColor;
+	}
+    
+	&:hover {
+		opacity: 1;
+
+		.tweet-this--logo {
+			transform: translate3d(-50%,-50%,0) perspective(1px) scale(.75) rotate(-12deg);
+			transform-origin: center center;
+        }
+		.tweet-this--text {
+			transform: translate3d(-110%,0,0);
+			opacity: 1;
+		}
+	}
+}
+
+.tweet-this--logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: 0;
+	display: inline-block;
+	backface-visibility: hidden;
+	width: 200%;
+	transform: translate3d(-50%,-50%,0) scale(.5);
+	transition: transform .3s ease-in-out;
+}
+
+.tweet-this--text {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 280%;
+	opacity: 0;
+	transform: translate3d(-80%,0,0) scale(.25);
+	transform-origin: right center;
+	transition: all .3s ease-in-out;
+}

@@ -6,19 +6,19 @@
       window.requestAnimationFrame = requestAnimationFrame;
   })();
 
-  // Terrain stuff.
-  var background = document.getElementById("bgCanvas"),
-      bgCtx = background.getContext("2d"),
-      width = window.innerWidth,
-      height = document.getElementById("primary-header").offsetHeight;
-      //height = $('#header').outerHeight();
+// Terrain stuff.
+var background = document.getElementById("bgCanvas"),
+		bgCtx = background.getContext("2d"),
+		width = window.innerWidth,
+		height = document.getElementById("primary-header").offsetHeight;
+		//height = $('#header').outerHeight();
 
-  //(height < 400) ? height = 400: height;
+//(height < 400) ? height = 400: height;
 
-  background.width = width;
-  background.height = height;
+background.width = width;
+background.height = height;
 
-  function Terrain(options) {
+function Terrain(options) {
       options = options || {};
       this.terrain = document.createElement("canvas");
       this.terCtx = this.terrain.getContext("2d");
@@ -209,4 +209,18 @@ function toggleNavigation(event) {
   body.classList.toggle('nav-open');
 }
 
-//$('body').addClass('nav-open')
+
+
+
+jQuery(document).ready(function ($) {
+    'use strict';
+    
+    // Masonry grid
+    var $container = $('.masonry');
+    // init
+    $container.packery({
+        itemSelector: '.masonry > article',
+        gutter: $container.find('.masonry-gutter')[0],
+    });
+
+});

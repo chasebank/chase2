@@ -60,7 +60,12 @@ main {
 
 section {
   margin: 0 auto;
-  max-width: calc(1000px + 4vw)
+
+  > *:not(.breakout) {
+		max-width: calc(1000px + 4vw);
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 .nav-trigger {
@@ -150,11 +155,20 @@ section {
     transform: translateX(0);
   }
 
+	//
+	// Animation
+	//
+	.social-media li,
   .nav a {
-    animation: slide-in .4s .2s backwards;
+    animation: slide-left .4s .2s backwards;
+		
+		@media only screen and (min-width: 1200px) {
+			animation: slide-right .4s .2s backwards;
+		}
   }
 
-  @for $i from 1 to 11 {
+  @for $i from 1 to 12 {
+		.social-media li:nth-child(#{$i}),
     .nav li:nth-child(#{$i}) a { animation-delay: $i * 0.1s; }
   }
 }
@@ -199,5 +213,56 @@ section {
     right: 0;
     padding: calc(1.5rem + 1.2vw) 3.5em 2em 3.5em;
     transform: translateX(100%);
+  }
+}
+
+
+
+.masonry article {
+    padding: 2rem;
+    border-radius: 2rem
+}
+
+/*
+    Masonry Layout
+*/
+$masonryGutter: 10px;
+
+// override lobotimized owl
+.masonry { margin-top: -$masonryGutter; }
+
+/* clearfix */
+.masonry:after {
+  content: ' ';
+  display: block;
+  clear: both;
+}
+
+.masonry-gutter {
+  width: $masonryGutter;
+}
+.masonry > article {
+  float: left;
+  // 3 columns
+  width: calc( (100% - (#{$masonryGutter} *2)) / 3 )!important;
+  margin-top: $masonryGutter;
+  
+  @media screen and (min-width: 1200px) {
+    //width: ~"calc( (100% - (@{masonryGutter} *2)) / 3 )";
+  }
+  
+  @media screen and (min-width: 1000px) and (max-width: 1350px) {
+    // 2 columns
+    width: calc( (100% - #{$masonryGutter}) / 2 )!important;
+  }
+  
+    @media screen and (min-width: 900px) and (max-width: 1050px) {
+        // 2 columns
+        width: calc( (100% - #{$masonryGutter}) / 2 )!important;
+        &.quote { width: 100%!important;}
+    }
+  
+  @media screen and (max-width: 899px) {
+    width: 100%!important;
   }
 }
