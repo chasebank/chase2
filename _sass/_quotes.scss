@@ -109,7 +109,7 @@ article.quote {
 
 // Stagger quotes at 100% on quotes page
 .quotes-page article.quote {
-	@media screen and (min-width: 1049px) {
+	@media screen and (max-width: 1049px) {
 		&:nth-child(odd) {
 			left: auto!important;
 			right: 0px!important;
