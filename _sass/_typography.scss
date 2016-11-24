@@ -76,15 +76,23 @@ h1, h2 {
   font-size: $mod_1*$mod_1*$mod_1 *1rem; 
   @include fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font);
   text-transform: uppercase;
+	position: relative;
+
+	&:after {
+		display: block;
+		content: '';
+		position: absolute;
+		bottom: -.15rem;
+		left: 0;
+		width: 100%;
+		height: .15rem;
+		background-image: linear-gradient(to right,
+		color(gray,light), rgba(color(gray,light),0));
+	}
 }
 
 h1 {
   padding: 0 0 0.25rem 0;
-  border-bottom: 3px solid #ccc;
-}
-
-h2 {   
-  border-bottom: 1px solid #ccc;
 }
 
 h3 { 
@@ -217,4 +225,79 @@ section {
   
   h1,
   h2 { margin-top: 0 }
+}
+
+.example {
+	@extend h6;
+	position: relative;
+
+	&:after {
+		display: block;
+		content: '';
+		position: absolute;
+		bottom: -.15rem;
+		left: 0;
+		width: 100%;
+		height: .15rem;
+		background-image: linear-gradient(to right,
+		color(primary,base), rgba(color(primary,base),0));
+	}
+}
+
+.cp_embed_wrapper {
+	@extend h5;
+}
+
+dt {
+	position: relative;
+	cursor: pointer;
+	margin-left: 2rem;
+	@extend h5;
+
+	&:before {
+		display: inline-block;
+		position: absolute;
+		top: 0;
+		left: -2rem;
+		font-family: 'FontAwesome';
+		content:'\f078';
+		opacity: .5;
+		color: color(primary,base);
+		transform: rotate(0deg);
+		backface-visibility: hidden;
+		transition: all .4s ease-out;
+	}
+
+	&.toggled {
+		&:before {
+			opacity: 1;
+			transform: rotate(180deg);
+		}
+
+		&:hover {
+			&:before { opacity: 1 }
+		}
+	}
+
+	&:hover {
+        &:before { opacity: .8 }
+	}
+}
+
+dd {
+	position: relative;
+	top: 0;
+	left: 2rem;
+	background: linear-gradient(
+	to right,
+	#171d1f, transparent);
+	background: #deecf0;
+	padding: 1em;
+	margin: 0;
+	width: calc(100% - 2rem);
+	display: block;
+	
+	> *:last-child {
+		margin-bottom: 0px;
+	}
 }

@@ -14,5 +14,5 @@ Inspired by [Eric Rasch](http://codepen.io/ericrasch/pen/HzoEx)
 
 (resize browser to see the label change)
 
-<p data-height="268" data-theme-id="21051" data-slug-hash="f2d9c718e1588d11df71f94c0559bd7c" data-default-tab="result" data-user="chasebank" class='codepen'>See the Pen <a href='http://codepen.io/chasebank/pen/f2d9c718e1588d11df71f94c0559bd7c/'>Responsive Breakpoint Label</a> by Chase (<a href='http://codepen.io/chasebank'>@chasebank</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<p data-height="300" data-theme-id="21051" data-slug-hash="f2d9c718e1588d11df71f94c0559bd7c" data-default-tab="css,result" data-user="chasebank" data-embed-version="2" data-pen-title="Responsive Breakpoint Label" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/chasebank/pen/f2d9c718e1588d11df71f94c0559bd7c/">Responsive Breakpoint Label</a> by Chase (<a href="http://codepen.io/chasebank">@chasebank</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>

@@ -16,8 +16,9 @@ The only downside, if there is any, is blank space in the mark up of inline elem
 
 My version is tailored for how I work, but more details and a neat grid builder can be found at [justifygrid.com](http://justifygrid.com/)
 
-<p data-height="300" data-theme-id="26404" data-slug-hash="rxQRvK" data-default-tab="css" data-user="chasebank" data-embed-version="2" data-pen-title="Justified Grid - LESS" class="codepen">See the Pen <a href="http://codepen.io/chasebank/pen/rxQRvK/">Justified Grid - LESS</a> by Chase (<a href="http://codepen.io/chasebank">@chasebank</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="300" data-theme-id="26404" data-slug-hash="YpqEMO" data-default-tab="css" data-user="chasebank" data-embed-version="2" data-pen-title="Justified Grid - LESS" class="codepen">See the Pen <a href="http://codepen.io/chasebank/pen/YpqEMO/">Justified Grid - SCSS</a> by Chase (<a href="http://codepen.io/chasebank">@chasebank</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 <p class="example">Usage example:</p>
-<p data-height="300" data-theme-id="21051" data-slug-hash="pgmGaL" data-default-tab="css,result" data-user="chasebank" data-embed-version="2" data-pen-title="Justified Grid Example" class="codepen">See the Pen <a href="http://codepen.io/chasebank/pen/pgmGaL/">Justified Grid Example</a> by Chase (<a href="http://codepen.io/chasebank">@chasebank</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="350" data-theme-id="21051" data-slug-hash="pgmGaL" data-default-tab="css,result" data-user="chasebank" data-embed-version="2" data-pen-title="Justified Grid Example" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/chasebank/pen/pgmGaL/">Justified Grid Example</a> by Chase (<a href="http://codepen.io/chasebank">@chasebank</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
