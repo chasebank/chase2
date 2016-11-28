@@ -1,12 +1,12 @@
 ---
 layout: code
-title: Color Variable Maps
-description: Use SASS maps for managing color variables
+title: Media query mixin/SASS Map
+description: Use SASS maps for managing media query breakpoints
 date: 2016-08-13
 category: codes
 ---
 
-This is a useful mixin for referencing some centralized media queries in a SASS Map.
+This is a mixin for referencing some centralized media queries in a SASS Map.
 
 There's also an extra feature naming non-standard queries (effectively adding them to the map), so you can reference them elsewhere if needed (probably not a good practice... but still useful).
 

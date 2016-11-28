@@ -32,7 +32,7 @@ gems:
   - jekyll-gist
 
 exclude:
-    - node_modules
+  - node_modules
 
 collections:
   notes:

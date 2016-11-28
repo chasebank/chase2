@@ -1,0 +1,20 @@
+.article-codes {
+  background: #121c1f url('public/img/codes-bg.gif');
+  background: color(gray,base) url('public/img/codes-bg.gif');
+  background-position: top right;
+  background-repeat: no-repeat;
+  border: 2px solid #141f22;
+  
+  h4 { margin-top: 0 }
+  
+  p {
+    color: color(primary,white);
+    margin-bottom: 0
+  }
+}
+
+.masonry.codes-page article {
+  //margin: 0;
+  //padding: 1.5rem;
+  border-radius: 1.5rem;
+}

@@ -12,14 +12,27 @@ This isn't a [boilerplate](https://html5boilerplate.com/) or framework. It's jus
 
 <dl>
   <dt>Declare a root font size of 10px - Make math easy</dt>
-	<dd>I don't like math. I also don't like em units, except in certain situations where their cascading nature adds simplicity, rather than chaos. rem units reference the root font size, so 1rem has the same value everywhere, regardless of context. With a root font size of 10px, math is easy. 1.6rem will always = 16px</dd>
+	<dd>I don't like math. I also don't like em units, except in certain situations where their cascade adds simplicity, rather than chaos. rem units reference the root font size, so 1rem has the same value everywhere, regardless of context. With a root font size of 10px, math is easy. 1.6rem will always = 16px</dd>
 
   <dt>Fix the crazy CSS box model - Set everything to border-box</dt>
-	<dd>This changes borders and padding to inset, so they don't add dimension to a defined height/width. 100px width + 10px padding + 2px border = 100px. Border-box is set on the html element and everything else inherits it. Unless for some strange reason a different box-sizing is defined later on, the new crazy setting will cascade to it's crazy children.</dd>
+	<dd>Effectively changes borders & padding to inset, so they don't add dimension to a defined height/width. 100px width + 10px padding + 2px border = 100px. Border-box is set on the html element and everything else inherits it. Unless for some strange reason a different box-sizing is defined later on, the new crazy setting will cascade to it's crazy children.</dd>
 
   <dt>Media query mixin/SASS map for quickly targeting breakpoints</dt>
-  <dd><p>Useful for quickly blocking out layouts and prototypes.</p>
-  <p class="example">Usage example:</p></dd>
+  <dd><p>There's also an extra feature naming non-standard queries (effectively adding them to the map), so you can reference them elsewhere if needed (probably not a good practice... but still useful)..</p>
+  <p class="example">Usage example:</p>
+  <p data-height="300" data-theme-id="26404" data-slug-hash="XNdVMV" data-default-tab="css" data-user="chasebank" data-embed-version="2" data-pen-title="Sass map breakpoints" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/chasebank/pen/XNdVMV/">Sass map breakpoints</a> by Chase (<a href="http://codepen.io/chasebank">@chasebank</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+  </dd>
+  
+  <dt>Color variable SASS map and function</dt>
+  <dd>
+    <p>This is a useful mixin for referencing some centralized color variables in a SASS Map. The nesting nature of the map also helps encourage more clear standards for color variations.</p>
+
+<p>I learned this technique from [Jake Albaugh](http://codepen.io/jakealbaugh/post/using-sass-functions-to-access-complex-variable-maps).</p>
+
+<p class="example">Usage example:</p>
+<p data-height="300" data-theme-id="26404" data-slug-hash="oYZPvg" data-default-tab="css" data-user="chasebank" data-embed-version="2" data-pen-title="Color Variable Map" class="codepen">See the Pen <a href="http://codepen.io/chasebank/pen/oYZPvg/">Color Variable Map</a> by Chase (<a href="http://codepen.io/chasebank">@chasebank</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+  </dd>
   
   <dt>Justified Grid</dt>
   <dd>
