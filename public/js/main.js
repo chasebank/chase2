@@ -483,3 +483,17 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 
 // execute above function
 initPhotoSwipeFromDOM('.gallery');
+
+
+
+
+
+//
+// Only show 'back to top' link when page can scroll
+//
+// Only show footer if page content requires scroll.
+$(window).ready(function(){
+    $(this).one('scroll', function(){
+        $('#back-to-top').css('display','block');
+    });
+});
