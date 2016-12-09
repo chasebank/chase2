@@ -1,11 +1,27 @@
-@mixin style($pagebg,$content-bg,$content-bggradient,$text,$accent,$black: black,$white: white) {
-	background: $pagebg;
+@mixin style($css,$pagebg,$content-bg,$content-bggradient,$text,$accent,$black: black,$white: white) {
+	background: $pagebg url(portfolio/#{$css}/project-hero-new.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
 	color: $text;
-	.overlay { background: $black }
+	.overlay { background: $pagebg }
+	
+	.chase-logo-svg { display: none }
+	
+	@include media(small) {
+		background: $pagebg url(portfolio/#{$css}/project-hero-narrow.jpg);
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		
+		main {
+			padding-top: 0
+		}
+	}
 	
 	main {
 		background: linear-gradient(to right, $content-bggradient, $content-bg 15%, $content-bg 85%, $content-bggradient);
+		background: none;
 		border: none;
+		box-shadow: none;
 	}
 	
 	h1,
@@ -23,6 +39,24 @@
 		color: $text
 	}
 	
+	.project-gallery-item {
+		border-color: $text;
+		background: $text;
+	}
+	
+	//
+	// photoswipe
+	//
+	.pswp__top-bar,
+	.pswp__ui--fit .pswp__top-bar {
+		background-color: $pagebg;
+	}
+	.pswp__bg {
+		// needs to be a tad darker than nav overlay,
+		// because main also goes transparent on that one
+		background: rgba($pagebg, .84);
+	}
+	
 	.nav a {
 		color: $text;
 		
@@ -31,6 +65,21 @@
 	
 	ul.social-media a {
 		color: $text
+	}
+	
+	.nav-trigger span,
+	.nav-trigger span:before,
+	.nav-trigger span:after {
+		background: $white;
+		box-shadow: 0px 1px 6px darken($accent,20%);
+	}
+	
+	&.nav-open {
+		.nav-trigger span,
+		.nav-trigger span:before,
+		.nav-trigger span:after {
+			box-shadow: 0px 1px 5px rgba($accent,0);
+		}
 	}
 	
 	.nav-container {
@@ -59,15 +108,120 @@
 }
 
 .feastbeast {
-	@include style(red,green,blue,yellow,purple)
+	@include style('feastbeast',red,green,blue,yellow,purple)
 }
 
 .aau {
 	@include style(
+		$css: 'aau',
 		$pagebg: #0b152e,
 		$content-bg: #0b152e,
 		$content-bggradient: #0b152e,
 		$text: #dffbff,
 		$accent: #00e9ff
 	)
+}
+
+
+
+
+//
+// Gallery
+//
+/*
+.project-gallery {
+	max-width: 1200px;
+	margin: 0 auto;
+	
+	figure {
+		background: magenta;
+		overflow-x: hidden;
+		
+		img {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: auto;
+			height: 100%;
+		}
+	}
+}
+
+.gallery-item {
+   display: inline-block;
+   margin: 1%;
+   background: yellow;
+   padding-top: 40%
+}
+
+.gallery-item_100 { width: calc(100% - 2%) }
+
+.gallery-item_70 { width: calc(96% * .7) }
+
+.gallery-item_50 { width: calc(96% * .5) }
+
+.gallery-item_30 { width: calc(94% * .3) }
+.gallery-item_30_landscape { padding-top: 19% }
+*/
+
+
+
+.project-gallery-item {
+  border: 2px solid #333;
+  background: #333;
+  border-color: hsla(0, 0%, 0%, 0.5);
+  border-radius: 5px;
+  
+  position: relative;
+  overflow: hidden;
+}
+
+.large {
+  width: 68%;
+  padding-top: 40%;
+  //background: lightblue;
+}
+
+.small {
+  width: 28%;
+  padding-top: 18.85%;
+}
+
+.full {
+  width: 98%;
+  padding-top: 50%
+}
+
+.half {
+  width: 48%;
+  padding-top: 30%
+}
+
+.narrow {
+  width: 28%;
+  padding-top: 40%;
+}
+
+.gallery-item_aau-shield { padding-top: 20% }
+
+
+
+
+.gallery-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: auto;
+  width: 100%;
+  transform: translateX(-50%) translateY(-50%)
+}
+
+.small .gallery-image {
+  height: 100%;
+}
+
+.narrow .gallery-image {
+  height: 100%;
+  width: auto
 }

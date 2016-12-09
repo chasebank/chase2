@@ -159,8 +159,6 @@ p, li, dd, td {
 }
 
 img {
-  border-style: none;
-  max-width: 100%;
   box-sizing: content-box;
 }
 
@@ -222,7 +220,8 @@ section {
 }
 
 .page-header {
-  text-align: center;
+  //text-align: center;
+	margin-bottom: 2rem;
   
   h1,
   h2 { margin-top: 0 }

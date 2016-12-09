@@ -1,6 +1,6 @@
 .article-codes {
   background: #121c1f url('public/img/codes-bg.gif');
-  background: color(gray,base) url('public/img/codes-bg.gif');
+  //background: color(gray,base) url('public/img/codes-bg.gif');
   background-position: top right;
   background-repeat: no-repeat;
   border: 2px solid #141f22;
@@ -11,10 +11,49 @@
     color: color(primary,white);
     margin-bottom: 0
   }
+	
+	h4,
+	p {
+		border-bottom: 2px solid transparent;
+		transition: border-bottom .3s ease-in-out;
+		
+		&:hover,
+		&:hover ~ * {
+			border-bottom: 2px solid currentColor;
+		}
+	}
 }
 
-.masonry.codes-page article {
+.codes-page .article-codes {
   //margin: 0;
-  //padding: 1.5rem;
+  padding: 2rem 1.5rem;
   border-radius: 1.5rem;
+	
+	&:before {
+		display: block;
+		content: '';
+		position: absolute;
+		top: -.2rem;
+		left: 1rem;
+		right: 1rem;
+		width: calc(100% - 2rem);
+		height: .75rem;
+		background: color(primary,base);
+		border-radius: 100%;
+		box-shadow:
+			0px 0px 4px color(primary,base),
+			0px 0px 10px color(primary,base),
+			0px 0px 15px color(primary,base);
+		z-index: -10;
+		transition: all .4s ease-in-out;
+		transform: scaleX(.75) scaleY(0);
+		opacity: 0
+	}
+	
+	&:hover {
+		&:before {
+			transform: scaleX(1) scaleY(1);
+			opacity: 1
+		}
+	}
 }

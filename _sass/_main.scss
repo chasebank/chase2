@@ -37,7 +37,7 @@ body {
 .main-content {
   position: relative;
   flex: 1;
-  z-index: 1;
+  //z-index: 1;
 }
 
 //$navWidth: (200px + 6vw);
@@ -52,9 +52,7 @@ main {
   min-height: 100%;
 
   padding: 4rem 5%;
-
   overflow: hidden;
-  z-index: -1;
   transition: all .5s;
 }
 
@@ -147,7 +145,7 @@ section {
     transform: rotate(45deg);
   }
   .overlay {
-    opacity: .6;
+    opacity: .8;
     visibility: visible;
   }
 
@@ -211,58 +209,80 @@ section {
     background: linear-gradient(to right, white 60%, $colorBgGradient);
     left: initial;
     right: 0;
-    padding: calc(1.5rem + 1.2vw) 3.5em 2em 3.5em;
+    padding: calc(1.5rem + 1.2vw) 0 2em 0;
     transform: translateX(100%);
   }
 }
 
 
 
-.masonry article {
-  //padding: 2rem;
-  border-radius: 2rem
+
+/* ---- isotope ---- */
+.isotope {
+  //margin: 0 .5%;
+  margin: 0 1%;
+  //background: red;
+  //max-width: 1200px;
 }
 
-/*
-    Masonry Layout
-*/
-$masonryGutter: 10px;
-
-// override lobotimized owl
-.masonry { margin-top: -$masonryGutter; }
-
-/* clearfix */
-.masonry:after {
-  content: ' ';
+/* clear fix */
+.isotope:after {
+  content: '';
   display: block;
   clear: both;
 }
 
-.masonry-gutter {
-  width: $masonryGutter;
+/* ---- .item ---- */
+.item {
+  display: inline-block;
+  width: 31.33333%;
+  margin: 1%;
+  background: yellow;
 }
-.masonry > article {
+
+@media all and (max-width: 1400px) {
+  .item {
+    width: 50%;
+    width: 48%
+  }
+}
+
+@media all and (max-width: 800px) {
+  .item {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+
+
+
+//
+// Masonry
+//
+.masonry {
+  //background: #EEE;
+  margin: 0;
+}
+
+/* clearfix */
+.masonry:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.masonry-item {
   float: left;
-  // 3 columns
-  width: calc( (100% - (#{$masonryGutter} *2)) / 3 )!important;
-  margin-top: $masonryGutter;
-  
-  @media screen and (min-width: 1200px) {
-    //width: ~"calc( (100% - (@{masonryGutter} *2)) / 3 )";
-  }
-  
-  @media screen and (min-width: 1000px) and (max-width: 1350px) {
-    // 2 columns
-    width: calc( (100% - #{$masonryGutter}) / 2 )!important;
-  }
-  
-    @media screen and (min-width: 900px) and (max-width: 1050px) {
-        // 2 columns
-        width: calc( (100% - #{$masonryGutter}) / 2 )!important;
-        &.quote { width: 100%!important;}
-    }
-  
-  @media screen and (max-width: 899px) {
-    width: 100%!important;
-  }
+  margin: 1%;
+}
+
+
+
+
+//
+// Photoswipe
+//
+.gallery figcaption {
+  display: none;
 }

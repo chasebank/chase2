@@ -1,9 +1,12 @@
-article.quote {
+.quote_single {
+	width: 100%;
+}
+
+.quote {
   position: relative;
   padding: 3.5rem 1.5rem;
   display: table;
-  width: 100%;
-  max-width: 700px;
+	max-width: 40rem;
   min-height: 175px;
   text-shadow: none;
   border-radius: 1.5rem 1.5rem 1rem 1.5rem;
@@ -103,13 +106,18 @@ article.quote {
 }
 
 // Stagger quotes at 100% on quotes page
-.quotes-page article.quote {
-  @media screen and (max-width: 1049px) {
-    &:nth-child(odd) {
+.quotes-page .quote {
+  @media screen and (max-width: 1000px) {
+		margin-top: 3%;
+		width: 100%;
+  }
+	
+	@media screen and (min-width: 40rem) and (max-width: 1000px) {
+		&:nth-child(odd) {
       left: auto!important;
       right: 0px!important;
     }
-  }
+	}
 }
 
 #twitter-widget-0 {

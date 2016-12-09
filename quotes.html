@@ -18,14 +18,14 @@ description: These are some quotes I've found inspirational, thought provoking, 
   </defs>
 </svg>
 <div class="breakout">
-  <div class="masonry quotes-page">
+  <div class="isotope quotes-page">
     <!-- Masonry gutter and masonry column settings -->
-    <div class="masonry-gutter"></div>
+    <!--<div class="masonry-gutter"></div>-->
     <!-- Begin masonry items -->
     {% assign sorted = (site.notes | sort: 'date') %}
     {% for quote in sorted reversed %}
       {% if quote.category == "quotes" %}
-        <article class="quote" style="background-color: rgba({{ quote.background-color }},1); color: #{{ quote.text-color }}">
+        <article class="item quote" style="background-color: rgba({{ quote.background-color }},1); color: #{{ quote.text-color }}">
           {% if quote.author-image %}
             <figure style="background-image: url({{ site.baseurl }}/public/img/quote-authors/{{ quote.author-image }}.png)"><span class="author-fade" style="background-image: -webkit-linear-gradient(left, rgba({{ quote.background-color }},0) 70%, rgba({{ quote.background-color }},1)); background-image: linear-gradient(to right, rgba({{ quote.background-color }},0) 70%, rgba({{ quote.background-color }},1));"></span></figure>
           {% endif %}

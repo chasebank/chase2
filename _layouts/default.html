@@ -3,16 +3,7 @@
 
   {% include head.html %}
 
-  <body
-		class="{{ page.css }}"
-	>
-
-    <!--<footer class="footer">
-        <small>
-          &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>. All rights reserved.
-        </small>
-      </footer>
-    -->
+  <body class="{{ page.css }}">
 		
     <header id="primary-header">
       <canvas id="bgCanvas"></canvas>
@@ -78,12 +69,12 @@
     <div class="main-content">
       <main>
         <section class="intro">
-					<header>
+					<header class="page-header">
             <h2>{{ page.title }}</h2>
-						<p>{{ page.description }}</p>
+						{% if page.description %}
+         			<p>{{ page.description }}</p>
+						{% endif %}
           </header>
-        </section>
-        <section>
           {{ content }}
         </section>
       </main>
@@ -129,6 +120,15 @@
     </nav>
 
     <div class="overlay"></div>
+    
+    
+    <!--<footer class="footer">
+        <small>
+          &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>. All rights reserved.
+        </small>
+      </footer>
+    -->
+    
 
     {% if site.analytics_id %}
     <script>
@@ -144,7 +144,7 @@
   src="https://code.jquery.com/jquery-2.2.4.min.js"
   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
   crossorigin="anonymous"></script>
-    <script src="{{ site.baseurl }}/packery.pkgd.js"></script>
+		<script src="https://unpkg.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
     <script src="{{ site.baseurl }}/scripts.js"></script>
   </body>
 </html>

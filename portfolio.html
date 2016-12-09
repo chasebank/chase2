@@ -1,7 +1,9 @@
 ---
 layout: default
 title: Portfolio
+css: portfolio
 ---
+<!--
 
 <ul id="portfolio" class="portfolio-thumbs">
     {% for project in site.portfolio %}
@@ -17,3 +19,20 @@ title: Portfolio
     </li>
     {% endfor %}
 </ul>
+
+
+-->
+
+
+<div class="breakout">
+	<ul class="portfolio-gallery">
+	  {% for project in site.portfolio %}
+	  <li class="project-thumb project-{{ project.css }}" style="background-image:url({{ site.baseurl }}{{ project.url }}project-thumb.jpg);">
+	    <div class="project-thumb_info">
+	      <h4>View Project</h4>
+	    </div>
+	    <a href="{{ site.baseurl }}{{ project.url }}" title="{{ project.title }}"></a>
+	  </li>
+	  {% endfor %}
+	</ul>
+</div>
