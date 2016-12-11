@@ -58,10 +58,13 @@ p, blockquote, figure, pre {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
+	color: color(primary,base);
+	transition: color .3s ease-in-out;
+	
   &:hover, &:focus, &:active {
     cursor: pointer; // some <a> without href
-    color: white;
+    color: color(text,base);
   }
 }
 

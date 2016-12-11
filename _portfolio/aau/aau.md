@@ -2,7 +2,7 @@
 layout: project
 title: AAU
 css: aau
-service: Marketing and Promotional Materials
+description: Marketing and Promotional Materials
 permalink: /portfolio/:title/
 ---
 
@@ -21,8 +21,8 @@ Common sports marketing campaigns like Nike and Gatorade have a recognizably *ex
 
 <div class="masonry gallery" itemscope itemtype="http://schema.org/ImageGallery">
 	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="masonry-item project-gallery-item full gallery-item_aau-shield">
-		<a href="http://cha.se.net/portfolio/aau/gallery/aau-logo-stylized-forweb.jpg" itemprop="contentUrl" data-size="2912x650">
-			<img src="http://cha.se.net/portfolio/aau/gallery/aau-logo-stylized-forweb-thumb.jpg" itemprop="thumbnail" alt="AAU Shield stylized logo design progression" class="gallery-image" />
+		<a href="gallery/aau-logo-stylized-forweb.jpg" itemprop="contentUrl" data-size="2912x650">
+			<img src="gallery/aau-logo-stylized-forweb-thumb.jpg" itemprop="thumbnail" alt="AAU Shield stylized logo design progression" class="gallery-image" />
 		</a>
 		<figcaption itemprop="caption description">AAU Shield stylized logo design progression</figcaption>
 	</figure>

@@ -1,8 +1,8 @@
 ---
 layout: project
 title: OfficeMax Office Depot
-css: officemax
-service: Marketing / Merchandise Displays / Client Work
+css: officemax-office-depot
+description: Marketing / Merchandise Displays / Client Work
 permalink: /portfolio/:title/
 ---
 
@@ -24,29 +24,41 @@ Know when and how to break the mold, alowing certain campaigns to stand out from
 Make messages clear and consise; Presentations personably relatable.
 Transition new branding in a way that appears perposeful and gradualy evolutionary - rather than chaotic and rapidly unfamiliar.
 
-<div class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
-  <div class="gallery-group">
-    <figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject">
-      <a href="gallery/maxperks.jpg" itemprop="contentUrl" data-size="1333x1000"><img src="gallery/maxperks-thumb.jpg" itemprop="thumbnail" alt="Image description" /></a>
-    </figure>
-    <figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject">
-      <a href="gallery/omax-rackcards.jpg" itemprop="contentUrl" data-size="1499x1000"><img src="gallery/omax-rackcards-thumb.jpg" itemprop="thumbnail" alt="Image description" /></a>
-    </figure>
-    <figure class="large" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="gallery/omax-disneyflyer.jpg" itemprop="contentUrl" data-size="1333x1000"><img src="gallery/omax-disneyflyer-thumb.jpg" itemprop="thumbnail" alt="Image description" /></a>
-    </figure>
-  </div>
-  <div class="gallery-group">
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="gallery/omax-magic.jpg" itemprop="contentUrl" data-size="1417x300" style="padding-top: 21.171489%"><img src="gallery/omax-magic-thumb.jpg" itemprop="thumbnail" alt="Image description" /></a>
-    </figure>
-  </div>
-  <div class="gallery-group">
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="gallery/print-capabilities.jpg" itemprop="contentUrl" data-size="1333x1000"><img src="gallery/print-capabilities-thumb.jpg" itemprop="thumbnail" alt="Image description" /></a>
-    </figure>
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="gallery/omax-endcaps.jpg" itemprop="contentUrl" data-size="1142x1000" style="background-position: center bottom"><img src="gallery/omax-endcaps-thumb.jpg" itemprop="thumbnail" alt="Image description" /></a>
-    </figure>
-  </div>
+<div class="masonry gallery" itemscope itemtype="http://schema.org/ImageGallery">
+	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="masonry-item project-gallery-item large">
+		<a href="gallery/omax-disneyflyer.jpg" itemprop="contentUrl" data-size="1333x1000">
+			<img src="gallery/omax-disneyflyer-thumb.jpg" itemprop="thumbnail" alt="OfficeMax Walt Disney partnership flyer" class="gallery-image" />
+		</a>
+		<figcaption itemprop="caption description">OfficeMax / Walt Disney partnership flyer</figcaption>
+	</figure>
+	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="masonry-item project-gallery-item small">
+		<a href="gallery/omax-maxperks.jpg" itemprop="contentUrl" data-size="1333x1000">
+			<img src="gallery/omax-maxperks-thumb.jpg" itemprop="thumbnail" alt="OfficeMax rewards program flyer" class="gallery-image" />
+		</a>
+		<figcaption itemprop="caption description">OfficeMax rewards program flyer</figcaption>
+	</figure>
+	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="masonry-item project-gallery-item small">
+		<a href="gallery/omax-rackcards.jpg" itemprop="contentUrl" data-size="1499x1000">
+			<img src="gallery/omax-rackcards-thumb.jpg" itemprop="thumbnail" alt="OfficeMax sales collateral rack cards" class="gallery-image" />
+		</a>
+		<figcaption itemprop="caption description">OfficeMax sales collateral rack cards</figcaption>
+	</figure>
+	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="masonry-item project-gallery-item full gallery-item_officemax-disney">
+		<a href="gallery/omax-magic.jpg" itemprop="contentUrl" data-size="1417x300">
+			<img src="gallery/omax-magic-thumb.jpg" itemprop="thumbnail" alt="OfficeMax / Walt Disney partnership logo" class="gallery-image" />
+		</a>
+		<figcaption itemprop="caption description">OfficeMax / Walt Disney partnership logo</figcaption>
+	</figure>
+	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="masonry-item project-gallery-item half">
+		<a href="gallery/omax-print-capabilities.jpg" itemprop="contentUrl" data-size="1333x1000">
+			<img src="gallery/omax-print-capabilities-thumb.jpg" itemprop="thumbnail" alt="Office Depot print capabilities canvassing flyer" class="gallery-image" />
+		</a>
+		<figcaption itemprop="caption description">Office Depot print sales canvassing flyer</figcaption>
+	</figure>
+	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="masonry-item project-gallery-item half">
+		<a href="gallery/omax-endcaps.jpg" itemprop="contentUrl" data-size="1142x1000">
+			<img src="gallery/omax-endcaps-thumb.jpg" itemprop="thumbnail" alt="OfficeMax seasonal merchandising displays" class="gallery-image" />
+		</a>
+		<figcaption itemprop="caption description">OfficeMax seasonal merchandising displays</figcaption>
+	</figure>
 </div>

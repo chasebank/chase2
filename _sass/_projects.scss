@@ -1,4 +1,14 @@
-@mixin style($css,$pagebg,$content-bg,$content-bggradient,$text,$accent,$black: black,$white: white) {
+.video-wrap {
+	position: relative;
+}
+
+.project-video {
+	width: 100%;
+	position: relative;
+	padding-top: 36.5%;
+}
+
+@mixin style($css,$pagebg,$content-bg,$content-bggradient,$text,$headline,$accent,$black: black,$white: white) {
 	background: $pagebg url(portfolio/#{$css}/project-hero-new.jpg);
 	background-repeat: no-repeat;
 	background-size: 100% auto;
@@ -11,10 +21,10 @@
 		background: $pagebg url(portfolio/#{$css}/project-hero-narrow.jpg);
 		background-repeat: no-repeat;
 		background-size: 100% auto;
-		
-		main {
-			padding-top: 0
-		}
+	}
+	
+	#primary-header {
+		min-height: initial
 	}
 	
 	main {
@@ -29,19 +39,54 @@
 	h3,
 	h4,
 	h5,
-	h6 { color: $accent }
+	h6 { color: $headline }
 	
-	.nav-trigger span, .nav-trigger span::before, .nav-trigger span::after {
-    background: $accent;
+	h2 {
+		border-bottom: none;
+		margin: 0;
+		
+		&:after {
+			display: none;
+		}
+	}
+	
+	section { text-shadow: 0px 2px 4px $pagebg }
+	
+	section h3 {
+		position: relative;
+		
+		&:after {
+			display: block;
+			content: '';
+			width: 100%;
+			position: absolute;
+			left: 0;
+			bottom: -.15rem;
+			height: .15rem;
+			background: linear-gradient(to right, $accent, rgba($accent, 0) )
+		}
+	}
+	
+	.page-description {
+		font-size: $mod_1*$mod_1 *1rem;
+		font-weight: bold;
+		margin-top: 0;
+		color: $accent
 	}
 	
 	section {
 		color: $text
 	}
 	
+	.video-wrap,
 	.project-gallery-item {
 		border-color: $text;
 		background: $text;
+	}
+	
+	a,
+	a:visited {
+		color: $headline
 	}
 	
 	//
@@ -60,7 +105,7 @@
 	.nav a {
 		color: $text;
 		
-		&.active { color: $accent }
+		&.active { color: $headline }
 	}
 	
 	ul.social-media a {
@@ -70,23 +115,23 @@
 	.nav-trigger span,
 	.nav-trigger span:before,
 	.nav-trigger span:after {
-		background: $white;
-		box-shadow: 0px 1px 6px darken($accent,20%);
+		background: $headline;
+		box-shadow: 0px 1px 6px $pagebg;
 	}
 	
 	&.nav-open {
 		.nav-trigger span,
 		.nav-trigger span:before,
 		.nav-trigger span:after {
-			box-shadow: 0px 1px 5px rgba($accent,0);
+			box-shadow: 0px 1px 5px rgba($pagebg,0);
 		}
 	}
 	
 	.nav-container {
-    background: linear-gradient(to left, $content-bg 60%, $content-bggradient);
+    background: linear-gradient(to left, $content-bg, $content-bggradient);
 		
 		@media only screen and (max-width: 1200px){
-			background: linear-gradient(to right, $content-bg 60%, $content-bggradient);
+			background: linear-gradient(to right, $content-bg, $content-bggradient);
 		}
 	}
 	
@@ -107,19 +152,133 @@
 	}
 }
 
-.feastbeast {
-	@include style('feastbeast',red,green,blue,yellow,purple)
+
+
+
+
+
+.officemax-office-depot {
+	@include style(
+		$css: 'officemax-office-depot',
+		$pagebg: #e4e4e4,
+		$content-bg: white,
+		$content-bggradient: #e4e4e4,
+		$text: #2f2929,
+		$headline: #ec1b3c,
+		$accent: #febc12
+	);
+	// this one is a png
+	background: #e4e4e4 url(portfolio/officemax-office-depot/project-hero.png);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	
+	@include media(small) {
+		background: #e4e4e4 url(portfolio/officemax-office-depot/project-hero-narrow.png);
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		
+		main {
+			padding-top: 10rem
+		}
+	}
+	.page-description { color: #2f2929 }
+	section h3:after {
+		background: linear-gradient(to right, #febc12, rgba(255,239,1,0.5), rgba(255,239,1,0) );
+	}
+	.pswp__top-bar { background-color: rgba(#2f2929,.5)!important }
 }
 
 .aau {
 	@include style(
 		$css: 'aau',
 		$pagebg: #0b152e,
-		$content-bg: #0b152e,
+		$content-bg: #0d1c42,
 		$content-bggradient: #0b152e,
 		$text: #dffbff,
-		$accent: #00e9ff
-	)
+		$headline: #00e9ff,
+		$accent: white
+	);
+	@include media(small) {
+		main {
+			//padding-top: 0
+		}
+	}
+	.nav-trigger span,
+	.nav-trigger span:before,
+	.nav-trigger span:after {
+		background: white;
+	}
+	section h3:after {
+		background: linear-gradient(to right, white, #00e9ff, rgba(white, 0) )
+	}
+}
+
+.walk-on-water {
+	@include style(
+		$css: 'walk-on-water',
+		$pagebg: white,
+		$content-bg: #f2fcfa,
+		$content-bggradient: white,
+		$text: #547171,
+		$headline: #00b3b5,
+		$accent: #db2e4a
+	);
+	main {
+		padding-top: 10rem
+	}
+	@include media(small) {
+		main {
+			padding-top: 1rem
+		}
+	}
+	.nav-trigger span,
+	.nav-trigger span:before,
+	.nav-trigger span:after {
+		background: #db2e4a;
+	}
+	.pswp__top-bar { background-color: rgba(#547171,.5)!important }
+}
+
+.feastbeast-food-truck {
+	@include style(
+		$css: 'feastbeast-food-truckfeastbeast',
+		$pagebg: #120101,
+		$content-bg: #310202,
+		$content-bggradient: #120101,
+		$text: white,
+		$headline: #ff434c,
+		$accent: #ffdfdf
+	);
+	
+	background-color: black;
+	background-image: url(portfolio/feastbeast-food-truck/project-hero.jpg), url(portfolio/feastbeast-food-truck/project-bg-new.png);
+  background-repeat: no-repeat, repeat-y;
+  background-position: top center, top center;
+	
+	@include media(small) {
+		background-color: black;
+		background-image: url(portfolio/feastbeast-food-truck/project-hero-mobile.png), url(portfolio/feastbeast-food-truck/project-bg-mobile.png);
+		background-repeat: no-repeat, repeat-y;
+		background-position: top center, top center;
+	}
+}
+
+.pga {
+	@include style(
+		$css: 'pga',
+		$pagebg: #ced6ac,
+		$content-bg: #b8ca97,
+		$content-bggradient: #ced6ac,
+		$text: #313634,
+		$headline: #7a6036,
+		$accent: #0b2a6c
+	);
+	.pswp__top-bar { background-color: rgba(#313634,.5)!important }
+	.nav-trigger span,
+	.nav-trigger span:before,
+	.nav-trigger span:after {
+		background: white;
+	}
 }
 
 
@@ -128,45 +287,6 @@
 //
 // Gallery
 //
-/*
-.project-gallery {
-	max-width: 1200px;
-	margin: 0 auto;
-	
-	figure {
-		background: magenta;
-		overflow-x: hidden;
-		
-		img {
-			position: absolute;
-			top: 0;
-			left: 50%;
-			transform: translateX(-50%);
-			width: auto;
-			height: 100%;
-		}
-	}
-}
-
-.gallery-item {
-   display: inline-block;
-   margin: 1%;
-   background: yellow;
-   padding-top: 40%
-}
-
-.gallery-item_100 { width: calc(100% - 2%) }
-
-.gallery-item_70 { width: calc(96% * .7) }
-
-.gallery-item_50 { width: calc(96% * .5) }
-
-.gallery-item_30 { width: calc(94% * .3) }
-.gallery-item_30_landscape { padding-top: 19% }
-*/
-
-
-
 .project-gallery-item {
   border: 2px solid #333;
   background: #333;
@@ -205,7 +325,18 @@
 
 .gallery-item_aau-shield { padding-top: 20% }
 
+.gallery-item_officemax-disney { padding-top: 20% }
 
+.project-gallery-video {
+	padding-top: 56%;
+	
+	iframe {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
 
 
 .gallery-image {

@@ -1,8 +1,8 @@
 ---
 layout: project
 title: FeastBeast Food Truck
-css: feastbeast
-service: Vehicle Wrap / Marketing and Promotional Materials / Branding
+css: feastbeast-food-truck
+description: Vehicle Wrap / Marketing & Promotional Materials / Branding
 permalink: /portfolio/:title/
 ---
 
@@ -24,21 +24,34 @@ Create a brand that's recognizably unique enough to stand out from the pack, in 
 
 All the intricacies of a large vehicle add even more complexity. Accurate measurements were vital, along with accounting for all details such as lights, doors and windows. It helped working closely with the sign company that would be printing and applying the final vehicle wrap. At over 23 feet long and nearly 8 feet wide, working in high resolutions at these sizes can be taxing on even high-end computers. But it's important to not sacrifice quality, and maximize the capabilities of a printer. To conserve computing resources, it helps to work with artwork scaled down to smaller physical sizes, but higher resolutions. However, this adds to the complexity of the measurements, and needs readjusted before hand off to the printer.
 
-<div class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
-  <div class="gallery-group">
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="gallery/feastbeast-actionshot.jpg" itemprop="contentUrl" data-size="1229x779"><img src="gallery/feastbeast-actionshot-thumb.jpg" itemprop="thumbnail" alt="Image description" /></a>
-    </figure>
-  </div>
-  <div class="gallery-group">
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="gallery/feastbeast-layout.jpg" itemprop="contentUrl" data-size="1193x716"><img src="gallery/feastbeast-layout-thumb.jpg" itemprop="thumbnail" alt="Image description" /></a>
-    </figure>
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="gallery/feastbeast-branding.jpg" itemprop="contentUrl" data-size="1073x872"><img src="gallery/feastbeast-branding-thumb.jpg" itemprop="thumbnail" alt="Image description" /></a>
-    </figure>
-    <figure class="large" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="gallery/feastbeast-printing.jpg" itemprop="contentUrl" data-size="1200x900" style="background-position: center bottom"><img src="gallery/feastbeast-printing-thumb.jpg" itemprop="thumbnail" alt="Image description" /></a>
-    </figure>
-  </div>
+<div class="masonry gallery" itemscope itemtype="http://schema.org/ImageGallery">
+	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="masonry-item project-gallery-item full">
+		<a href="gallery/feastbeast-actionshot.jpg" itemprop="contentUrl" data-size="1229x779">
+			<img src="gallery/feastbeast-actionshot-thumb.jpg" itemprop="thumbnail" alt="Feast Beast food truck in action" class="gallery-image" />
+		</a>
+		<figcaption itemprop="caption description">Feast Beast food truck in action</figcaption>
+	</figure>
+	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="masonry-item project-gallery-item small">
+		<a href="gallery/feastbeast-layout.jpg" itemprop="contentUrl" data-size="1193x716">
+			<img src="gallery/feastbeast-layout-thumb.jpg" itemprop="thumbnail" alt="Initial mapping of the truck" class="gallery-image" />
+		</a>
+		<figcaption itemprop="caption description">Initial mapping of the Feast Beast truck</figcaption>
+	</figure>
+	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="masonry-item project-gallery-item large">
+		<a href="gallery/feastbeast-printing.jpg" itemprop="contentUrl" data-size="1200x900">
+			<img src="gallery/feastbeast-printing-thumb.jpg" itemprop="thumbnail" alt="" class="gallery-image" />
+		</a>
+		<figcaption itemprop="caption description">Additional Feast Beast branding</figcaption>
+	</figure>
+	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="masonry-item project-gallery-item small">
+		<a href="gallery/feastbeast-branding.jpg" itemprop="contentUrl" data-size="1073x872">
+			<img src="gallery/feastbeast-branding-thumb.jpg" itemprop="thumbnail" alt="" class="gallery-image" />
+		</a>
+		<figcaption itemprop="caption description">Feast Beast vehicle wrap printing</figcaption>
+	</figure>
+</div>
+<div class="masonry">
+	<figure class="masonry-item project-gallery-item project-gallery-video full">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/lG0juIfuY_I" frameborder="0" allowfullscreen></iframe>
+	</figure>
 </div>

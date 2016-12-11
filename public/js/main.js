@@ -494,6 +494,6 @@ initPhotoSwipeFromDOM('.gallery');
 // Only show footer if page content requires scroll.
 $(window).ready(function(){
     $(this).one('scroll', function(){
-        $('#back-to-top').css('display','block');
+        $('#back-to-top').css('display','inline-block');
     });
 });

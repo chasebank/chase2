@@ -288,10 +288,11 @@ section {
 }
 
 
-
+footer {
+	text-align: center;
+}
 
 #back-to-top {
 	display: none;
-	text-align: center;
-	margin-top: 2rem;
+	margin: 2rem auto 0 auto;
 }

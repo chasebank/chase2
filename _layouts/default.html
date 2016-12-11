@@ -72,12 +72,15 @@
 					<header class="page-header">
             <h2>{{ page.title }}</h2>
 						{% if page.description %}
-         			<p>{{ page.description }}</p>
+         			<p class="page-description">{{ page.description }}</p>
 						{% endif %}
           </header>
           {{ content }}
         </section>
-        <a href="#top" title="Scroll back to top" id="back-to-top">Back to top <i class="fa fa-reply fa-rotate-90"></i></a>
+        
+        <footer>
+        	<a href="#top" title="Scroll back to top" id="back-to-top">Back to top <i class="fa fa-reply fa-rotate-90"></i></a>
+        </footer>
       </main>
     </div>
 		
