@@ -101,7 +101,6 @@
     height: 2.5rem;
     right: 0;
     bottom: -1.1rem;
-    z-index: -1;
   }
 }
 
@@ -172,4 +171,8 @@
   transform: translate3d(-80%, 0, 0) scale(.25);
   transform-origin: right center;
   transition: all .3s ease-in-out;
+}
+
+.quote-single .video-embed-wrap {
+	min-width: 30rem
 }
