@@ -1,13 +1,59 @@
+#primary-header {
+   position: relative;
+   padding-top: 25%;
+   overflow: hidden;
+}
+
 canvas {
-  position:absolute;
-  top:0;
-  left:0;
-  width: 100%;
+	position:absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+
+.mountains {
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 200%;
+   background-repeat: repeat-x;
+   background-position: bottom center;
+}
+
+.mountains_background {
+   background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/106403/mountains-background.gif);
+   background-size: 45% auto;
+   animation: rollingMountains 300s linear infinite;
+}
+
+.mountains_midground {
+   background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/106403/mountains-midground.gif);
+   background-size: 35% auto;
+   animation: rollingMountains 160s linear infinite;
+}
+
+.mountains_foreground {
+   background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/106403/mountains-foreground.gif);
+   background-size: 20% auto;
+   animation: rollingMountains 80s linear infinite;
+}
+
+@keyframes rollingMountains {
+    0% { transform: translate3d(0,0,0) }
+    100% { transform: translate3d(-50%,0,0) }
+}
+
+@include media(small) {
+   #primary-header { padding-top: 50% }
+   
+   .mountains { width: 300% }
 }
 
 .chase-logo-svg {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%,-80%);
   display: block;
@@ -25,51 +71,3 @@ canvas {
 .chase-logo-c-bottomhl { fill: url(#gradient-top-bottomhl) }
 .chase-logo-c-bottom { fill: url(#gradient-left-right) }
 .chase-logo-letter { fill: url(#gradient-bottom-top) }
-
-.mountains {
-  position: absolute;
-  bottom: 0;
-  width: 200vw;
-  overflow: hidden;
-}
-
-.mountains > span {
-  float: left;
-  padding-top: 100%;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: contain;
-
-  &:not(:first-of-type) {
-    margin-left: -1px;
-  }
-}
-
-#mountains-background {
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/106403/mountains-background.gif);
-  width: 85vw;
-  animation: rolling-mountains 320s linear infinite;
-
-  @include media(small) { width: 66vw }
-}
-
-#mountains-midground {
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/106403/mountains-midground.gif);
-  width: 65vw;
-  animation: rolling-mountains 100s linear infinite;
-
-  @include media(small) { width: 80vw }
-}
-
-#mountains-foreground {
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/106403/mountains-foreground.gif);
-  width: 50vw;
-  animation: rolling-mountains 40s linear infinite;
-
-  @include media(small) { width: 100vw }
-}
-
-@keyframes rolling-mountains {
-  0% { transform: translate3d(0,0,0) }
-  100% { transform: translate3d(-100%,0,0) }
-}

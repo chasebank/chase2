@@ -22,18 +22,6 @@ body {
   z-index: 0;
 }
 
-#primary-header {
-  position: relative;
-  padding-top: 25%;
-  overflow: hidden;
-  
-  @include media(small) {
-    min-height: 200px;
-    height: 4vh;
-    overflow: hidden
-  }
-}
-
 .main-content {
   position: relative;
   flex: 1;
