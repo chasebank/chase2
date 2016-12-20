@@ -266,7 +266,7 @@ $( function() {
     itemSelector: '.masonry-item',
     columnWidth: function() {
       // 5 columns
-      return this.size.innerWidth / 10;
+      return this.size.innerWidth / 12;
     }
   });
   

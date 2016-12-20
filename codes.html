@@ -5,12 +5,21 @@ permalink: /notes/codes/
 description: A bunch of useful tidbits I've stumbled upon, lifted from some random corner of the interwebs, or discovered myself through trial of blood sweat and tears. <a href="/contact" title="Contact Me">Let me know</a> if you have some&nbsp;cool&nbsp;tricks&nbsp;you&nbsp;use!
 ---
 
-
 <div class="breakout">
+  <div class="masonry codes-page">
+    {% assign sorted = (site.notes | sort: 'date') %}
+    {% for code in sorted reversed %}
+      {% if code.category == "codes" %}
+        <article class="masonry-item article-codes">
+          <a href="{{ site.baseurl }}{{ code.url }}"><h4>{{ code.title }}</h4><p>{{ code.description }}</p></a>
+        </article>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<!--<div class="breakout">
   <div class="isotope codes-page">
-    <!-- Masonry gutter and masonry column settings -->
-    <!--<div class="masonry-gutter"></div>-->
-    <!-- Begin masonry items -->
     {% assign sorted = (site.notes | sort: 'date') %}
     {% for code in sorted reversed %}
       {% if code.category == "codes" %}
@@ -20,4 +29,4 @@ description: A bunch of useful tidbits I've stumbled upon, lifted from some rand
       {% endif %}
     {% endfor %}
   </div>
-</div>
+</div>-->

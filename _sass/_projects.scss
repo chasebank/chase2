@@ -297,35 +297,44 @@
   overflow: hidden;
 }
 
-.large {
-  width: 68%;
-  padding-top: 40%;
-  //background: lightblue;
+
+.gallery {
+	width: calc(100% + 2%);
+	max-width: calc(1000px + 4vw + 1.5%)!important;
+	margin-left: 0!important;
+	margin-right: 0!important;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	
+  .full {
+    padding-top: 50%
+  }
+  .large {
+    padding-top: 40%
+  }
+  .small {
+    padding-top: 18.85%;
+  }
+  
+  .third {
+    padding-top: 30%;
+  }
+  
+  .half {
+    padding-top: 30%
+  }
+
+  .narrow {
+    padding-top: 40%;
+  }
 }
 
-.small {
-  width: 28%;
-  padding-top: 18.85%;
-}
+.masonry-item.gallery-item_aau-shield { padding-top: 20% }
 
-.full {
-  width: 98%;
-  padding-top: 50%
-}
+.masonry-item.gallery-item_aau-shield { padding-top: 20% }
 
-.half {
-  width: 48%;
-  padding-top: 30%
-}
-
-.narrow {
-  width: 28%;
-  padding-top: 40%;
-}
-
-.gallery-item_aau-shield { padding-top: 20% }
-
-.gallery-item_officemax-disney { padding-top: 20% }
+.masonry-item.gallery-item_officemax-disney { padding-top: 20% }
 
 .project-gallery-video {
 	padding-top: 56%;

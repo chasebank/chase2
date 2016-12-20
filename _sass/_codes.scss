@@ -3,7 +3,6 @@
   //background: color(gray,base) url('public/img/codes-bg.gif');
   background-position: top right;
   background-repeat: no-repeat;
-  border: 2px solid #141f22;
   
   h4 { margin-top: 0 }
   
@@ -56,4 +55,8 @@
 			opacity: 1
 		}
 	}
+}
+
+.codes-page .masonry-item {
+	
 }
