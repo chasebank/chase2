@@ -43,7 +43,6 @@
 	
 	h2 {
 		border-bottom: none;
-		margin: 0;
 		
 		&:after {
 			display: none;
@@ -67,11 +66,9 @@
 		}
 	}
 	
-	.page-description {
-		font-size: $mod_1*$mod_1 *1rem;
-		font-weight: bold;
-		margin-top: 0;
-		color: $accent
+	.page-tagline {
+		color: $accent;
+		margin-bottom: initial
 	}
 	
 	section {

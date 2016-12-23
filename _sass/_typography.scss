@@ -72,34 +72,35 @@ p a {
   text-decoration: underline;
 }
 
+.page-header {
+	h1,
+	h2 {
+		display: flex;
+		align-items: center;
+		background: color(primary,base);
+		color: white!important;
+		align-items: stretch;
 
-h1,
-h2 {
-	display: flex;
-	align-items: center;
-	background: color(primary,base);
-	color: white!important;
-	align-items: stretch;
-    
-    &:after {
-			flex-grow: 1;
-			margin-left: .25em;
+			&:after {
+				flex-grow: 1;
+				margin-left: .25em;
+				content: '';
+				//height: .14em;
+				//height: 100%;
+				background: linear-gradient(to left, rgba(color(gray,dark),0),  color(gray,mid));
+				background: linear-gradient(to right, rgba(white,0), white)
+			}
+
+		&:before {
+			display: block;
 			content: '';
-			//height: .14em;
-			//height: 100%;
-			background: linear-gradient(to left, rgba(color(gray,dark),0),  color(gray,mid));
-			background: linear-gradient(to right, rgba(white,0), white)
-    }
-	
-	&:before {
-		display: block;
-		content: '';
-		position: absolute;
-		top: 0;
-		left: -1rem;
-		width: 1rem;
-		height: 100%;
-		background: linear-gradient(to left, color(primary,base), rgba(color(primary,base),0) )
+			position: absolute;
+			top: 0;
+			left: -1rem;
+			width: 1rem;
+			height: 100%;
+			background: linear-gradient(to left, color(primary,base), rgba(color(primary,base),0) )
+		}
 	}
 }
 
@@ -109,6 +110,13 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   margin: 2rem 0 1rem 0;
   color: color(primary,base)
+}
+
+section {
+	h1:first-of-type,
+	h2:first-of-type {
+		margin-top: 0
+	}
 }
 
 h1, h2 {  
@@ -194,6 +202,13 @@ p, li, dd, td {
     position: relative;
     top: -1px;
   }
+}
+
+.page-tagline {
+	font-size: $mod_1*$mod_1 *1rem;
+	font-weight: bold;
+	margin-top: -1rem;
+	margin-bottom: 4rem;
 }
 
 img {
