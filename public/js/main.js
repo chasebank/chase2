@@ -276,6 +276,14 @@ $( function() {
 
 
 //
+// Gallery img enlarge hover
+//
+$('.gallery-image').after('<div class="image-enlarge_tooltip"><span class="image-enlarge_tooltip_content"><svg><use xlink:href="#icon_enlarge-image"></use></svg>Enlarge</span></div>');
+
+
+
+
+//
 // Photoswipe
 //
 var initPhotoSwipeFromDOM = function(gallerySelector) {

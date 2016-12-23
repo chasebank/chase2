@@ -50,11 +50,11 @@ $colors: (
 
 
 @mixin font-stack-normal {
-  font-family: "Exo 2", "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
+  font-family: "Lato", Sans-Serif;
 }
 @mixin font-stack-header {
   // font-family: 'Raleway', Sans-Serif;
-  font-family: "Lato", Sans-Serif;
+	font-family: "Exo 2", "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
 }
 @mixin font-stack-code {
   font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
@@ -105,4 +105,47 @@ $colors: (
     scrollbar-face-color: $foreground-color;
     scrollbar-track-color: $background-color;
   }
+}
+
+
+
+
+$columns: 12 !default;
+$column-width: ($columns - 1) !default;
+$gutter-width: 1rem !default;
+%grid {
+   text-align: justify !important;
+   text-justify: distribute-all-lines;
+   font-size: 0 !important;
+   &:after {
+      content: '';
+      display: inline-block;
+      width: 100%;
+   }
+   
+   & > * {
+      text-align: left;
+      font-size: medium;
+   }
+}
+%grid-cell {
+   vertical-align: top;
+   display: inline-block;
+   width: 100%;
+   margin-bottom: $gutter-width;
+}
+@function grid-span($cols, $total: $columns) {
+   $gutterCalc: $total / $cols;
+   $totalGutter: ($gutterCalc - 1) * $gutter-width;
+   @return calc((100% - #{$totalGutter}) / #{$gutterCalc});
+}
+@mixin grid-push($cols, $total: $columns) {
+   $gutterCalc: $total / $cols;
+   $totalGutter: ($gutterCalc - 1) * $gutter-width;
+   left: calc((100% - #{$totalGutter}) / #{$gutterCalc} + #{$gutter-width});
+}
+@mixin grid-pull($cols, $total: $columns) {
+   $gutterCalc: $total / $cols;
+   $totalGutter: ($gutterCalc - 1) * $gutter-width;
+   left: calc( ((100% - #{$totalGutter}) / #{$gutterCalc} + #{$gutter-width}) * -1);
 }
