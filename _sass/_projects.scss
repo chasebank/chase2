@@ -187,8 +187,8 @@
 		background-repeat: no-repeat;
 		background-size: 100% auto;
 		
-		main {
-			padding-top: 10rem
+		header {
+			padding-top: 45%!important
 		}
 	}
 	.page-tagline { color: #2f2929 }
@@ -270,6 +270,16 @@
 		background-image: url(portfolio/feastbeast-food-truck/project-hero-mobile.png), url(portfolio/feastbeast-food-truck/project-bg-mobile.png);
 		background-repeat: no-repeat, repeat-y;
 		background-position: top center, top center;
+		
+		header {
+			padding-top: 25%!important
+		}
+		
+		section {
+			width: 95%;
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 }
 
@@ -288,6 +298,12 @@
 	.nav-trigger span:before,
 	.nav-trigger span:after {
 		background: white;
+	}
+	
+	@include media(small) {
+		header {
+			padding-top: 40%!important
+		}
 	}
 }
 
