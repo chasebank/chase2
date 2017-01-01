@@ -11,7 +11,7 @@ description: A bunch of useful tidbits I've stumbled upon, lifted from some rand
     {% for code in sorted reversed %}
       {% if code.category == "codes" %}
         <article class="masonry-item article-codes">
-          <a href="{{ site.baseurl }}{{ code.url }}"><h4>{{ code.title }}</h4><p>{{ code.description }}</p></a>
+          <a href="{{ site.baseurl }}{{ code.url }}" title="{{ code.title }}"><h4>{{ code.title }}</h4><p>{{ code.description }}</p></a>
         </article>
       {% endif %}
     {% endfor %}

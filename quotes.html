@@ -19,9 +19,6 @@ description: These are some quotes I've found inspirational, thought provoking, 
 </svg>
 <div class="breakout">
   <div class="masonry quotes-page">
-    <!-- Masonry gutter and masonry column settings -->
-    <!--<div class="masonry-gutter"></div>-->
-    <!-- Begin masonry items -->
     {% assign sorted = (site.notes | sort: 'date') %}
     {% for quote in sorted reversed %}
       {% if quote.category == "quotes" %}

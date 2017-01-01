@@ -75,21 +75,25 @@ p a {
 .page-header {
 	h1,
 	h2 {
-		display: flex;
+		/*display: flex;
 		align-items: center;
+		align-items: stretch;
 		background: color(primary,base);
 		color: white!important;
-		align-items: stretch;
 
-			&:after {
-				flex-grow: 1;
-				margin-left: .25em;
-				content: '';
-				//height: .14em;
-				//height: 100%;
-				background: linear-gradient(to left, rgba(color(gray,dark),0),  color(gray,mid));
-				background: linear-gradient(to right, rgba(white,0), white)
-			}
+		&:after {
+			flex-grow: 1;
+			margin-left: .25em;
+			content: '';
+			background: linear-gradient(to right, rgba(white,0), white)
+		}
+		
+		&:before {
+			flex-grow: 1;
+			margin-right: .25em;
+			content: '';
+			background: linear-gradient(to left, rgba(white,0), white)
+		}
 
 		&:before {
 			display: block;
@@ -100,7 +104,13 @@ p a {
 			width: 1rem;
 			height: 100%;
 			background: linear-gradient(to left, color(primary,base), rgba(color(primary,base),0) )
-		}
+		}*/
+		
+		text-align: center;
+	}
+	
+	p {
+		text-align: center
 	}
 }
 

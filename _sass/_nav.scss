@@ -43,6 +43,10 @@
   text-decoration: none;
   color: color(text,base);
   transform: translateZ(0);
+	
+	&.active {
+		color: color(primary,base)
+	}
 }
 
 @keyframes slide-left {
