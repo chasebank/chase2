@@ -3,8 +3,8 @@ permalink:           pretty
 
 # Setup
 title:               Chase Whiteside
-url:                 http://getpoole.com
-paginate:            1
+url:                 http://cha.se.net
+paginate:            5
 baseurl:             ""
 
 # Assets
@@ -16,9 +16,9 @@ sass:
 
 # About/contact
 author:
-  name:              Mark Otto
-  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
+  name:              Chase Whiteside
+  url:               https://cha.se.net
+  email:             chase@cha.se.net
 
 # Custom vars
 version:             2.0.0
