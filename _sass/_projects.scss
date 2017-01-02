@@ -165,6 +165,12 @@
 
 
 
+@mixin gallery-img-height($width, $height) {
+  padding-top: calc((#{$height} / #{$width}) * 100% - 4%)!important;
+	//padding-top: 60%!important
+}
+
+
 
 
 .officemax-office-depot {
@@ -198,6 +204,9 @@
 	.pswp__top-bar { background-color: rgba(#2f2929,.5)!important }
 }
 
+
+
+
 .aau {
 	@include style(
 		$css: 'aau',
@@ -222,6 +231,18 @@
 		background: linear-gradient(to right, white, #00e9ff, rgba(white, 0) )
 	}
 }
+
+// orientation fixes
+.aau-poster-basketball-assets,
+.aau-poster-basketball-closeup {
+	.gallery-image {
+		width: 100%!important;
+		height: auto!important;
+	}
+}
+
+
+
 
 .walk-on-water {
 	@include style(
@@ -248,6 +269,22 @@
 	}
 	.pswp__top-bar { background-color: rgba(#547171,.5)!important }
 }
+
+// orientation fixes
+.wow-eventad,
+.westin-ad,
+.wow-couponcard-back,
+.wow-powerofpink-poster,
+.wow-pandora-bracelet, 
+.wow-5k-postcard {
+	.gallery-image {
+		width: 100%!important;
+		height: auto!important;
+	}
+}
+
+
+
 
 .feastbeast-food-truck {
 	@include style(
@@ -283,6 +320,17 @@
 	}
 }
 
+// orientation fix
+.feastbeast-branding {
+	.gallery-image {
+		width: 100%!important;
+		height: auto!important;
+	}
+}
+
+
+
+
 .pga {
 	@include style(
 		$css: 'pga',
@@ -304,6 +352,12 @@
 		header {
 			padding-top: 40%!important
 		}
+	}
+}
+
+.pga-card-design {
+	.gallery-image {
+		top: 6%
 	}
 }
 
@@ -333,25 +387,37 @@
 	left: 50%;
 	transform: translateX(-50%);
 	
+	/*
+		@extends below override the default masonry-item media query
+	  that changes the blocks to half and full on large and small screens.
+	  I'm extending the original widths from _main.sass into these, which
+	  have a higher specificity.
+	*/
   .full {
+		@extend .full;
     padding-top: 50%
   }
   .large {
+		@extend .large;
     padding-top: 40%
   }
   .small {
+		@extend .small;
     padding-top: 18.85%;
   }
   
   .third {
+		@extend .third;
     padding-top: 30%;
   }
   
   .half {
+		@extend .half;
     padding-top: 30%
   }
 
   .narrow {
+		@extend .narrow;
     padding-top: 40%;
   }
 }

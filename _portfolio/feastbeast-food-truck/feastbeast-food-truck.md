@@ -43,7 +43,7 @@ All the intricacies of a large vehicle add even more complexity. Accurate measur
 		</a>
 		<figcaption itemprop="caption description">Additional Feast Beast branding</figcaption>
 	</figure>
-	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="masonry-item project-gallery-item small">
+	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="masonry-item project-gallery-item small feastbeast-branding">
 		<a href="gallery/feastbeast-branding.jpg" itemprop="contentUrl" data-size="1073x872">
 			<img src="gallery/feastbeast-branding-thumb.jpg" itemprop="thumbnail" alt="" class="gallery-image" />
 		</a>

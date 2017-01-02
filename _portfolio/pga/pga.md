@@ -31,7 +31,7 @@ To fully capture the golf 'winter wonderland' scene that was pictured in my mind
 		</a>
 		<figcaption itemprop="caption description"></figcaption>
 	</figure>
-	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="masonry-item project-gallery-item large">
+	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="masonry-item project-gallery-item large pga-card-design">
 		<a href="gallery/pga-card-design.jpg" itemprop="contentUrl" data-size="755x1000">
 			<img src="gallery/pga-card-design-thumb.jpg" itemprop="thumbnail" alt="" class="gallery-image" />
 		</a>

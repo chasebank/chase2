@@ -80,7 +80,7 @@ Common sports marketing campaigns like Nike and Gatorade have a recognizably *ex
 		</a>
 		<figcaption itemprop="caption description">AAU Shield poster printed</figcaption>
 	</figure>
-	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="masonry-item project-gallery-item small">
+	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="masonry-item project-gallery-item small aau-poster-basketball-assets">
 		<a href="gallery/aau-poster-basketball-assets-forweb.jpg" itemprop="contentUrl" data-size="767x900">
 			<img src="gallery/aau-poster-basketball-assets-forweb-thumb.jpg" itemprop="thumbnail" alt="AAU Basketball poster photo references and assets" class="gallery-image" />
 		</a>
@@ -92,7 +92,7 @@ Common sports marketing campaigns like Nike and Gatorade have a recognizably *ex
 		</a>
 		<figcaption itemprop="caption description">AAU Basketball poster</figcaption>
 	</figure>
-	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="masonry-item project-gallery-item small">
+	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="masonry-item project-gallery-item small aau-poster-basketball-closeup">
 		<a href="gallery/aau-poster-basketball-closeup-forweb.jpg" itemprop="contentUrl" data-size="1028x900">
 			<img src="gallery/aau-poster-basketball-closeup-forweb-thumb.jpg" itemprop="thumbnail" alt="AAU Basketball poster jersey closeup" class="gallery-image" />
 		</a>

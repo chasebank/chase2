@@ -254,14 +254,13 @@ section {
   width: 48%;
 }
 
-@media all and (max-width: 1400px) {
+@include media(large) {
   .masonry-item {
-		// half
     width: 48%
   }
 }
 
-@media all and (max-width: 800px) {
+@include media(phablet) {
   .masonry-item {
 		// full
     width: 98%
