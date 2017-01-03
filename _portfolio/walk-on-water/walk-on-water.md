@@ -2,7 +2,7 @@
 layout: project
 title: Walk on Water
 css: walk-on-water
-description: Marketing and Promotional Materials / Branding
+description: Marketing and Promotional Materials&nbsp;/&nbsp;Branding
 permalink: /portfolio/:title/
 ---
 

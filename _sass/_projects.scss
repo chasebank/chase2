@@ -258,9 +258,14 @@
 		padding-top: 10rem
 	}
 	@include media(small) {
+		header {
+			padding-top: 40%;
+		}
 		main {
 			padding-top: 1rem
 		}
+		h2,
+		.page-tagline { text-align: right }
 	}
 	.nav-trigger span,
 	.nav-trigger span:before,
