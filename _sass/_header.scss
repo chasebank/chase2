@@ -51,6 +51,7 @@ canvas {
    .mountains { width: 300% }
 }
 
+#home-link,
 .chase-logo-svg {
   position: absolute;
   top: 40%;
@@ -62,6 +63,12 @@ canvas {
   max-width: 250px;
   margin: 1rem auto 0 auto;
   //z-index: 100;
+}
+
+#home-link {
+  z-index: 100;
+  padding-top: 6%;
+  min-height: 70px;
 }
 
 //.chase-logo-svg {fill:fade(#adf1ff,35%);
