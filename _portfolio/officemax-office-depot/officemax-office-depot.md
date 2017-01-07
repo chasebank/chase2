@@ -1,6 +1,6 @@
 ---
 layout: project
-title: OfficeMax Office Depot
+title: OfficeMax / Office Depot
 css: officemax-office-depot
 description: Marketing / Merchandise Displays / Client Work
 permalink: /portfolio/:title/
@@ -8,21 +8,23 @@ permalink: /portfolio/:title/
 
 ### About OfficeMax
 
-OfficeMax is a North American based office supply retailer, focused on providing a total solution to businesses both small and large.  While the primary product is office supplies and furnature, solutions for every other facet of business are aso offered; including print, tech, marketing and business management support.
+OfficeMax is a North American based office supply retailer. For businesses both small and large, solutions for every facet of business are offered; including print, tech, marketing and business management support.
 
-In 2014 OfficeMax merged with competitor Office Depot, in an effort to join forces in an ever challenging retail landscape.
+In 2014 OfficeMax merged with competitor Office Depot.
+
+### Overview
+
+Work with marketing and sales teams to design materials that braught attention to specific offerings outside the blanket “office supplies” umbrella. The end-user ran the gamut from independent entrepreneurs and small businesses, to large state universities, medical facilities, and fortune 500s.
+
+Post OfficeMax / Office Depot merger: Design materials that seamlessly unified both OfficeMax and Office Depot brands.
 
 ### Challenges
 
-Bring attention to specific offerings outside the blanket “office supplies” umbrella.
-Resonate with all customers, from entrepreneurs and small business, to the fortune 500.
-Post merger: Seamlessly unify both OfficeMax and Office Depot brands.
+Know when and how to break the design mold, allowing certain campaigns to stand out from other more consistent marketing. 
 
-### Solutions
-
-Know when and how to break the mold, alowing certain campaigns to stand out from other consistent marketing.
 Make messages clear and consise; Presentations personably relatable.
-Transition new branding in a way that appears perposeful and gradualy evolutionary - rather than chaotic and rapidly unfamiliar.
+
+Transition new unified Office Depot/Max branding in a way that appeared purposeful and gradually evolutionary - rather than chaotic and unfamiliar.
 
 <div class="masonry gallery" itemscope itemtype="http://schema.org/ImageGallery">
 	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="masonry-item project-gallery-item large">

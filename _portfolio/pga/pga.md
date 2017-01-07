@@ -8,15 +8,15 @@ permalink: /portfolio/:title/
 
 ### About the PGA
 
-The Professional Golfer’s Association of America (PGA) is the largest working sports organization in the world, comprised of more than 27,000 dedicated supporters promoting the game of golf to everyone, everywhere.
+The Professional Golfer’s Association of America is the largest sports organization in the world, comprised of more than 27,000 dedicated supporters promoting the game of golf to everyone, everywhere.
 
 ### Project Overview
 
-Design a holiday card that captures the spirits of enjoying both golf and the holidays. My concept was to show a golf scene under a light winter's snow. The holidays are a time to enjoy the things you love with the ones you love - in this case, playing golf (come rain or shine, or even snow...).
+Design a holiday card that captures the holiday spirit and the joy of playing golf. My concept was to show a golf scene under a light winter's snow. The holidays are a time to enjoy the things you love with the ones you love - in this case, playing golf (come rain or shine, or even snow...).
 
 ### Challenges
 
-To fully capture the golf 'winter wonderland' scene that was pictured in my mind, a full photo composite was needed. Various elements were combined from 4 primary stock photos to create the final scene and mood. This also included realistically imposing the PGA logo onto a golf ball, intended for the main focal point. This was done using a displacement map, to warp and distort the logo around the contours of the golf ball dimples, along lighting adjustments laid overtop of the logo, to preserve the detail of the surface shadows and highlights.
+To fully capture the golf 'winter wonderland' scene that was pictured in my mind, a full photo composite was needed. Various elements were combined from 4 primary stock photos to create the final scene and mood. This also included realistically imposing the PGA logo onto a golf ball, intended for the main focal point. This was done using a displacement map, to warp and distort the logo around the contours of the golf ball dimples, along with lighting adjustments laid overtop of the logo, to preserve the detail of the surface shadows and highlights.
 
 <div class="masonry gallery" itemscope itemtype="http://schema.org/ImageGallery">
 	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="masonry-item project-gallery-item narrow">

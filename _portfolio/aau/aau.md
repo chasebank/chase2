@@ -6,17 +6,21 @@ description: Marketing and Promotional Materials
 permalink: /portfolio/:title/
 ---
 
-### About AAU
+### About the AAU
 
-The Amateur Athletic Union, founded in 1888, established standards and uniformity in amateur sports. With over 670,000 participants and over 100,000 volunteers, they've served as an international sports leader for over one hundred years. By supporting all ages at a grass roots level, they spread a philosophy of "Sports for All, Forever."
+The Amateur Athletic Union, founded in 1888, pioneered standards and uniformity in amateur sports. With over 670,000 participants and over 100,000 volunteers, they've served as an international sports leader for over one hundred years. By supporting all ages and numerous sports, at a grassroots level, they spread a philosophy of "Sports for All, Forever."
 
 ### Project Overview
 
-While AAU acts as a centralized support organization, the various independent leagues and districts are spread throughout the entire United States. My task was to design marketing materials, to aid them in player recruitment, fund raising and community building. 
+While the AAU acts as a central support organization, various independent leagues and districts are spread throughout the entire United States. My task was to design marketing materials, to aid those individuals in player recruitment, fundraising and community building. 
 
-Rather than settle for generic designs, our goal was to instead develop items that could be easily customized through an online ordering system, to better connect with each organization's personal events and communities. These items ranged from business cards and stationary, to posters, flyers and brochures, each with customizable text fields.
+Rather than settle for generic "one size fits all" designs, our goal was to instead develop items that could be easily customized through an online ordering platform, to better connect with each organization's unique personal events and communities. These items included business cards and stationary, rule books, posters, flyers, and brochures, each with customizable text fields and various sizing options.
 
-Common sports marketing campaigns like Nike and Gatorade have a recognizably *extreme* style. This is fitting for the competitive nature of sports and pushing one's self to achieve greatness. While the AAU may be primarily an amateur league, my goal was to create items that would help share that recognizable "big league" style.
+This presented unique design challenges of building flexibility into each item.
+
+### Design Influence
+
+Common sports marketing campaigns like Nike and Gatorade have a recognizably *extreme* style. This is fitting for the competitive nature of sports and pushing one's self to achieve greatness. While the AAU may be primarily an amateur league, my goal was to create designs that would share identity with that recognizable "big league" style.
 
 
 <div class="masonry gallery" itemscope itemtype="http://schema.org/ImageGallery">
