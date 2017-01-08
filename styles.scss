@@ -1,9 +1,16 @@
----
-# Use a comment to ensure Jekyll reads the file to be transformed into CSS later
-# only main files contain this front matter, not partials.
----
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css');
+/*@import url('_sass/_bitsnpieces.scss');
+@import url('_sass/_photoswipe');
+@import url('_sass/_typography');
+@import url('_sass/_main');
+@import url('_sass/_header');
+@import url('_sass/_nav');
+@import url('_sass/_portfolio');
+@import url('_sass/_projects');
+@import url('_sass/_quotes');
+@import url('_sass/_codes');*/
 
-@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css");
+
 @import "bitsnpieces";
 @import "photoswipe";
 @import "typography";
