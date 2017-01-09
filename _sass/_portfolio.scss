@@ -60,11 +60,11 @@
     background-position: top center;
   }
   
-  &.project-aau:before { background-image: url(img/imgblur-aau.png) }
-  &.project-feastbeast-food-truck:before { background-image: url(img/imgblur-feastbeast.png) }
-  &.project-officemax-office-depot:before { background-image: url(img/imgblur-officemax.png) }
-  &.project-pga:before { background-image: url(img/imgblur-pga.png) }
-  &.project-walk-on-water:before { background-image: url(img/imgblur-wow.png) }
+  &.project-aau:before { background-image: url(public/img/imgblur-aau.png) }
+  &.project-feastbeast-food-truck:before { background-image: url(public/img/imgblur-feastbeast.png) }
+  &.project-officemax-office-depot:before { background-image: url(public/img/imgblur-officemax.png) }
+  &.project-pga:before { background-image: url(public/img/imgblur-pga.png) }
+  &.project-walk-on-water:before { background-image: url(public/img/imgblur-wow.png) }
   
   &:after {
     top: 0;

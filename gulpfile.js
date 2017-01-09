@@ -3,8 +3,8 @@ var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
+var jekyll   		= process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 
-var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 };
@@ -47,22 +47,24 @@ gulp.task('sass', function () {
             onError: browserSync.notify
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-        .pipe(gulp.dest('public/'))
+        .pipe(gulp.dest('_site/'))
         .pipe(browserSync.reload({stream:true}))
-        .pipe(gulp.dest(''));
+				.pipe(gulp.dest(''))
 });
+
+
 
 /**
  * Watch scss files for changes & recompile
  * Watch html/md files, run jekyll & reload BrowserSync
  */
 gulp.task('watch', function () {
-    gulp.watch('_scss/*.scss', ['sass']);
+    gulp.watch('_sass/*.scss', ['sass']);
     gulp.watch([
 			'*.html',
 			'*.md',
-			'*.scss',
-			'_*/**/*'
+			'_*/**/*',
+			'!_sass/*.scss'
 		], ['jekyll-rebuild']);
 });
 
