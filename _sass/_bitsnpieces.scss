@@ -5,7 +5,7 @@ $breakpoints: (
   'notPhablet': '(min-width: 769px)',
   'large': '(min-width: 770px) and (max-width: 1400px)',
   'x-large': '(min-width: 1401px)',
-  'mobileNav' : '(min-width: 1200px)'
+  'mobileNav' : '(max-width: 1200px)'
 );
 @mixin media($name, $push: false) {
   @if map-has-key($breakpoints, $name) {
