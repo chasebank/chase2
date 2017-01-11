@@ -78,8 +78,7 @@ section {
   text-indent: 100%;
   
   @include media(mobileNav) {
-    left: initial;
-		right: 2rem;
+    left: calc(100% - 2rem - 44px);
   }
 }
 
