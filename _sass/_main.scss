@@ -69,7 +69,7 @@ section {
   z-index: 100;
   $spcr: calc(1rem + 1.2vw);
   top: 1.9rem;
-  right: 2rem;
+  left: 2rem;
   height: 44px;
   width: 44px;
   overflow: hidden;
@@ -77,9 +77,9 @@ section {
   white-space: nowrap;
   text-indent: 100%;
   
-  @media only screen and (min-width: 1200px) {
-    left: 2rem;
-    right: initial;
+  @include media(mobileNav) {
+    left: initial;
+		right: 2rem;
   }
 }
 
@@ -149,6 +149,10 @@ section {
 
   .nav-container {
     transform: translateX(0);
+		
+		@include media(mobileNav) {
+			transform: translateX(-100%)
+		}
   }
 
 	//
@@ -158,7 +162,7 @@ section {
   .nav a {
     animation: slide-left .4s .2s backwards;
 		
-		@media only screen and (min-width: 1200px) {
+		@include media(mobileNav) {
 			animation: slide-right .4s .2s backwards;
 		}
   }
@@ -203,12 +207,11 @@ section {
   
   @include scrollbars(0.5em, rgba(color(gray,mid),.2), none);
   
-  @media only screen and (max-width: 1200px) {
+  @include media(mobileNav) {
     background: linear-gradient(to right, white 60%, $colorBgGradient);
-    left: initial;
-    right: 0;
+    left: 100%;
     padding: calc(1.5rem + 1.2vw) 0 2em 0;
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
 }
 
