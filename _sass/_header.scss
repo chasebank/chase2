@@ -24,19 +24,19 @@ canvas {
 }
 
 .mountains_background {
-   background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/106403/mountains-background.gif);
+   background-image: url(public/img/mountains-background-new.gif);
    background-size: 45% auto;
    animation: rollingMountains 300s linear infinite;
 }
 
 .mountains_midground {
-   background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/106403/mountains-midground.gif);
+   background-image: url(public/img/mountains-midground.-newgif);
    background-size: 35% auto;
    animation: rollingMountains 160s linear infinite;
 }
 
 .mountains_foreground {
-   background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/106403/mountains-foreground.gif);
+   background-image: url(public/img/mountains-foreground-new.gif);
    background-size: 20% auto;
    animation: rollingMountains 80s linear infinite;
 }

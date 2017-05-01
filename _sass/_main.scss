@@ -31,9 +31,9 @@ body {
 $padding: 5%;
 main {
   position: relative;
-  background: linear-gradient(to right,
-      #deecf0,white 15%,white 85%, #deecf0);
-  border-top: 3px solid color(primary,base);
+  background:
+    linear-gradient(to bottom,white,rgba(white,0) 100px),
+    linear-gradient(to right,#deecf0,white 15%,white 85%, #deecf0);
   border-bottom: 3px solid color(primary,base);
   box-shadow: 0 0 50px rgba(black,0);
   min-height: 100%;
