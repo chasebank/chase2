@@ -75,20 +75,6 @@
     <nav class="nav-container" id="navigation">
       <ul class="nav">
         <li>
-          <a class="
-            {% if page.url contains '/notes/' or page.url == "/" %}active{% endif %}
-            {% if page.url contains "/blog" %}active{% endif %}
-            {% if page.url contains "/quotes" %}active{% endif %}
-            {% if page.url contains "/codes" %}active{% endif %}
-            {% if page.url contains "/tools" %}active{% endif %}
-          " href="{{ site.baseurl }}/notes/" title="Notes"><h3>Notes</h3></a>
-          <ul>
-            <!--<li><a class="{% if page.url contains "/blog" %}active{% endif %}" href="{{ site.baseurl }}/notes/blog" title="Blog">Blog</a></li>-->
-            <li><a class="{% if page.url contains "/quotes" %}active{% endif %}" href="{{ site.baseurl }}/notes/quotes" title="Quotes">Quotes</a></li>
-            <li><a class="{% if page.url contains "/codes" %}active{% endif %}" href="{{ site.baseurl }}/notes/codes" title="Code Snippets">Code</a></li>
-          </ul>
-        </li>
-        <li>
           <a class="{% if page.url contains "/portfolio" %}active{% endif %}" href="{{ site.baseurl }}/portfolio/" title="Portfolio"><h3>Portfolio</h3></a>
           <ul>
             {% for project in site.portfolio %}
